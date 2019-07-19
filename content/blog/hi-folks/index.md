@@ -1,108 +1,83 @@
 ---
-title: New Beginnings
+title: JS无形装逼，最为致命
 date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: 单行简洁的代码很难维护（有时甚至难以理解），但这并不能阻止广大攻城狮们脑洞，在编写简洁的代码后获得一定的满足感。
 ---
+> 除了三目运算，你还知道其他的装逼姿势吗？留言走你~~
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+**单行简洁的代码很难维护（有时甚至难以理解），但这并不能阻止广大攻城狮们脑洞，在编写简洁的代码后获得一定的满足感。**
 
-## On deer horse aboard tritely yikes and much
+以下我最近的一些收藏`javascript`精简代码集合。它们都可以在你的开发控制台中运行，你可以从控制台中查看运行结果。同时，我希望你能在评论中分享一些自己的藏品！
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+### 日历
+创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合
+``` js
+// 创建过去七天的数组
+[...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
+```
+### 生成随机ID
+在原型设计时经常使用的创建ID功能。但是我在实际项目中看到有人使用它。其实这并不安全
+``` js
+// 生成长度为11的随机字母数字字符串
+Math.random().toString(36).substring(2);
+// hg7znok52x
+```
+### 获取URL的查询参数
+这个获取URL的查询参数代码，是我见过最精简的`QAQ`
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+`?foo=bar&baz=bing => {foo: bar, baz: bing}`
+``` js
+// 获取URL的查询参数
+q={};location.search.replace(/([^?&=]+)=([^&]+)/g,(_,k,v)=>q[k]=v);q;
+```
+### 本地时间
+通过一堆HTML，您可以创建一个本地时间，其中包含您可以一口气读出的源代码，它每秒都会用当前时间更新页面
+``` js
+// 创建本地时间
+<body onload="setInterval(()=>document.body.innerHTML=new Date().toLocaleString().slice(10,19))"></body>
+```
+### 数组混淆
+随机更改数组元素顺序，混淆数组
+``` js
+// 随机更改数组元素顺序，混淆数组
+(arr) => arr.slice().sort(() => Math.random() - 0.5)
+/* 
+let a = (arr) => arr.slice().sort(() => Math.random() - 0.5)
+let b = a([1,2,3,4,5])
+console.log(b)
+*/
+```
+### 生成随机十六进制代码（生成随机颜色）
+使用JavaScript简洁代码生成随机十六进制代码
+``` js
+// 生成随机十六进制代码 如：'#c618b2'
+'#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+```
+### 一个面试题
+这是一个臭名昭著的面试题，让你写出他的运行结果，受不了~
+``` js
+for(i=0;++i<101;console.log(i%5?f||i:f+'Buzz'))f=i%3?'':'Fizz'
+```
+### 数组去重
+这是一个原生的JS函数但是非常简洁，Set接受任何可迭代对象，如数组[1,2,3,3]，并删除重复项
+``` js
+// 数组去重
+[...new Set(arr)]
+```
+### 创建特定大小的数组
+方便快捷创建特定大小的数组
+``` js
+[...Array(3).keys()]
+// [0, 1, 2]
+```
+### 返回一个键盘（惊呆了）
+这是一个很难看懂的简洁代码，但是运行后你会惊呆的，他竟然返回一个图形键盘
+``` js
+// 用字符串返回一个键盘图形
+(_=>[..."`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~"].map(x=>(o+=`/${b='_'.repeat(w=x<y?2:' 667699'[x=["BS","TAB","CAPS","ENTER"][p++]||'SHIFT',p])}\\|`,m+=y+(x+'    ').slice(0,w)+y+y,n+=y+b+y+y,l+=' __'+b)[73]&&(k.push(l,m,n,o),l='',m=n=o=y),m=n=o=y='|',p=l=k=[])&&k.join`
+`)()
+```
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rethoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
-
-### Overlaid the jeepers uselessly much excluding
-
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
-
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
-
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
-
-### According a funnily until pre-set or arrogant well cheerful
-
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
-
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
-
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rethoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
-
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
-
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
-
-#### Silent delightfully including because before one up barring chameleon
-
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
-
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
-
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rethoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
-
-###### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.
+这是它的打印结果：
+![一个键盘](https://user-gold-cdn.xitu.io/2019/4/28/16a633464379dcf6?w=534&h=253&f=png&s=10476)
+惊人！
