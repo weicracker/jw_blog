@@ -5,7 +5,7 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `http://blog.vips.im`,
     social: {
-      twitter: `kylemathews`,
+      github: `weicracker`,
     },
   },
   plugins: [
@@ -80,8 +80,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `纪威的博客`,
+        short_name: `纪威`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
