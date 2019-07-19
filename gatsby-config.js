@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-plugin-page-progress',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
