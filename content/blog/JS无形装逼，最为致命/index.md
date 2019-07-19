@@ -78,6 +78,8 @@ for(i=0;++i<101;console.log(i%5?f||i:f+'Buzz'))f=i%3?'':'Fizz'
 `)()
 ```
 
-这是它的打印结果：
-![一个键盘](https://user-gold-cdn.xitu.io/2019/4/28/16a633464379dcf6?w=534&h=253&f=png&s=10476)
+这是它的打印结果： 
+
+![一个键盘](https://api.vips.im/juejin/2019/4/28/16a633464379dcf6?w=534&h=253&f=png&s=10476) 
+
 惊人！
