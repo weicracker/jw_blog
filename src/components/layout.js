@@ -63,9 +63,9 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, 创建通过
+          © {new Date().getFullYear()}, 京ICP备17070286号-1
           {`  `}
-          <a href="https://vips.im">纪威</a>
+          {/* <a href="https://vips.im">纪威</a> */}
         </footer>
       </div>
     )
