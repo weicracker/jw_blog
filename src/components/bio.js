@@ -33,7 +33,7 @@ const Bio = () => {
   `)
 
   const { author, social } = data.site.siteMetadata
-  
+
   return (
     <div
       style={{
@@ -57,10 +57,8 @@ const Bio = () => {
       <p>
         作者 <strong>{author}</strong> , 在北京工作中.
         {` `}
-        <br/>
-        <a href={`https://github.com/${social.github}`}>
-          GITHUB
-        </a>
+        <br />
+        <a href={`https://github.com/${social.github}`}>GITHUB</a>
       </p>
     </div>
   )
