@@ -38,7 +38,11 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        margin:"40px 20px",
+        padding:10,
+        borderRadius:3,
+        border:"1px solid #ecd8d8",
+        boxShadow: "0 1px 3px 0 rgba(0,34,77,.1)"
       }}
     >
       <Image

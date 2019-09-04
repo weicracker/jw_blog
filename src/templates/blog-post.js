@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GitTalk from "../components/Gittalk"
 import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
@@ -42,7 +43,7 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
+        <GitTalk/>
         <ul
           style={{
             display: `flex`,

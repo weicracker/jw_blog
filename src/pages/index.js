@@ -1,9 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// import Bio from "../components/bio"
+import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import NoteOne from "../components/Note"
 import { rhythm } from "../utils/typography"
 
 import indexStyles from "./index.module.css"
@@ -13,12 +14,10 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    console.log(posts);
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="全部文章" />
-        {/* <Bio /> */}
-        <div style={{ width: '65%', display: 'inline-block' }}>
+        <div style={{ width: '65%', float: 'left' }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -40,15 +39,20 @@ class BlogIndex extends React.Component {
                   }}
                 />
                 <div className={indexStyles.all_btn}>
-                  <button><Link style={{ boxShadow: `none`,color:"#fff" }} to={node.fields.slug}>
-                    阅读全部
-                  </Link></button>
+                  <button>
+                    <Link style={{ boxShadow: `none`, color: "#fff" }} to={node.fields.slug}>
+                      阅读全部
+                    </Link>
+                  </button>
                 </div>
               </div>
             )
           })}
         </div>
-        <div style={{ width: '35%', display: 'inline-block' }}></div>
+        <div style={{ width: '35%', float: 'right' }}>
+          <Bio />
+          <NoteOne />
+        </div>
       </Layout>
     )
   }

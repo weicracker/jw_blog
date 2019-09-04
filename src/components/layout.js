@@ -95,7 +95,7 @@ class Layout extends React.Component {
             })}
           </nav>
         </header>
-        <main>{children}</main>
+        <main style={{overflow:"hidden",padding:20}}>{children}</main>
         <footer style={{marginTop:30}}>
           © {new Date().getFullYear()}, 京ICP备17070286号-1
           {`  `}
