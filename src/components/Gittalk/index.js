@@ -6,9 +6,9 @@ class GitTalk extends React.Component {
         const gitalk = new Gitalk({
             clientID: '1f9510e6ee6e0e8b3b43',
             clientSecret: 'e0ab5e96401ee63762e26f89337990917b7943a5',
-            repo: 'https://github.com/weicracker/jw_blog',
+            repo: 'jw_blog',
             owner: 'weicracker',
-            admin: ['jiwei, jiwei'],
+            admin: ['weicracker'],
             id: window.location.pathname,      // Ensure uniqueness and length less than 50
             distractionFreeMode: false  // Facebook-like distraction free mode
         })
