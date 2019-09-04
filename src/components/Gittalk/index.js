@@ -1,6 +1,7 @@
 import React from "react";
 import Gitalk from 'gitalk';
-import 'gitalk/dist/gitalk.css'
+import 'gitalk/dist/gitalk.css';
+import md5 from "md5";
 class GitTalk extends React.Component {
     componentDidMount() {
         const gitalk = new Gitalk({
@@ -9,7 +10,7 @@ class GitTalk extends React.Component {
             repo: 'jw_blog',
             owner: 'weicracker',
             admin: ['weicracker'],
-            id: window.location.pathname,      // Ensure uniqueness and length less than 50
+            id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50
             distractionFreeMode: false  // Facebook-like distraction free mode
         })
 
