@@ -30,7 +30,7 @@ class News extends React.Component {
         <Tabs style={{marginTop:20}}>
           <TabList>
             {hotList.map((val, idx) => {
-              return <Tab key={idx}>{val.name}</Tab>
+              return <Tab style={{fontSize:14}} key={idx}>{val.name}</Tab>
             })}
 
           </TabList>
