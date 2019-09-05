@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import NoteOne from "../components/Note"
 import { rhythm } from "../utils/typography"
-
+import "bootstrap/dist/css/bootstrap-grid.min.css"
 import indexStyles from "./index.module.css"
 
 class BlogIndex extends React.Component {
@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="全部文章" />
-        <div style={{ width: '65%', float: 'left' }}>
+        <div className="col-md-12  col-lg-8" style={{ float: 'left' }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -49,7 +49,7 @@ class BlogIndex extends React.Component {
             )
           })}
         </div>
-        <div style={{ width: '35%', float: 'right' }}>
+        <div className={'col-lg-4 ' + indexStyles.siderbar} style={{ float: 'right' }}>
           <Bio />
           <NoteOne />
         </div>

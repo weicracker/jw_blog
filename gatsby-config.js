@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `纪威的博客`,// 纪威的个人博客
-    author: `纪威`,
+    title: `Megatron的博客`,// Megatron的个人博客
+    author: `Megatron`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `http://blog.vips.im`,
     social: {
@@ -81,8 +81,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `纪威的博客`,
-        short_name: `纪威`,
+        name: `Megatron的博客`,
+        short_name: `Megatron`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

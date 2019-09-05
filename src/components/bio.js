@@ -38,10 +38,10 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        margin:"40px 20px",
-        padding:10,
-        borderRadius:3,
-        border:"1px solid #ecd8d8",
+        margin: "40px 20px",
+        padding: '10px 10px 0 20px',
+        borderRadius: 3,
+        border: "1px solid #ecd8d8",
         boxShadow: "0 1px 3px 0 rgba(0,34,77,.1)"
       }}
     >
@@ -59,10 +59,13 @@ const Bio = () => {
         }}
       />
       <p>
-        作者 <strong>{author}</strong> , 在北京工作中.
-        {` `}
+        作者 <strong>{author}</strong>
         <br />
-        <a href={`https://github.com/${social.github}`}>GITHUB</a>
+        <small>{`在北京工作中. `}</small>
+        <br />
+        <small>专注前端技术分享. </small>
+        <br />
+        <small><a href={`https://github.com/${social.github}`}>GITHUB</a></small>
       </p>
     </div>
   )
