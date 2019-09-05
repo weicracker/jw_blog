@@ -11,7 +11,7 @@ class PublicAct {
     }
     // 获取每日一句内容
     async getEverySaying() {
-        let res = await fetch("https://v1.hitokoto.cn/?c=d");
+        let res = await fetch("https://v1.hitokoto.cn/?c=e");
         if (res.status === 200) {
             let ret = await res.json();
             return ret;
