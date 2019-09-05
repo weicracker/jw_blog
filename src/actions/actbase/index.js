@@ -12,16 +12,16 @@ class ActionBase {
     }
     initAxios() {
         //设置全局axios默认值
+        axios.defaults.withCredentials=true;
         axios.defaults.timeout = 10000; //10000的超时验证
         axios.defaults.headers['Content-Type'] = 'application/json;charset=UTF-8';
         axios.defaults.headers['Accept'] = 'application/json;charset=UTF-8';
-        // axios.defaults.headers['XASPSESSION'] = this.asp.user.tokenstr;
         //request拦截器
         axios.interceptors.request.use(
             config => {
                 //每次发送请求之前检测都mobx存有token,那么都要放在请求头发送给服务器
                 if (true) {
-                    config.headers['XASPSESSION'] = this.asp.user.tokenstr;
+                    config.headers['XASPSESSION'] = '';
                 }
                 return config;
             },
@@ -40,15 +40,21 @@ class ActionBase {
                         case 401:
                             // 用户token过期或用户未登录
                             console.log(401);
+                            break;
                         case 404:
                             // 用户token过期或用户未登录
                             console.log("请求的内容不存在");
                             console.log(404);
+                            break;
                         case 408:
                             // 请求超时
                             console.log(408);
+                            break;
                         case 500:
                             // 用户token过期或用户未登录
+                            console.log("服务器内部错误");
+                            break;
+                        default:
                             console.log("服务器内部错误");
                     }
                 } else {

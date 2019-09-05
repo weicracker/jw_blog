@@ -7,7 +7,7 @@ class News extends React.Component {
         const siteTitle = data.site.siteMetadata.title
         return (
             <Layout location={this.props.location} title={siteTitle}>
-                <div>1111</div>
+                <div>导航</div>
             </Layout>
         )
     }
