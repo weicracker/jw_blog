@@ -30,7 +30,7 @@ class HotTabPanel extends Component {
                                 this.state.hotnews.map((val, idx) => {
                                     return (
                                         <li key={idx}>
-                                            <a href={val.url}>
+                                            <a href={val.url} target="__blank">
                                                 <h4>{idx + 1 + '.' + val.title}</h4>
                                                 <span>{val.desc ? val.desc.substr(0, 50) : ""}</span>
                                             </a>
