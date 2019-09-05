@@ -13,8 +13,8 @@ class NavBar extends React.Component {
             name: "热榜",
             link: "/news"
         }, {
-            name: "导航",
-            link: "/navigation"
+            name: "工具",
+            link: "/tools"
         }, {
             name: "应用",
             link: "/apps"
