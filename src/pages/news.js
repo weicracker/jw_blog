@@ -27,7 +27,7 @@ class News extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="热榜" />
-        <Tabs>
+        <Tabs style={{marginTop:20}}>
           <TabList>
             {hotList.map((val, idx) => {
               return <Tab key={idx}>{val.name}</Tab>

@@ -12,7 +12,7 @@ class ActionBase {
     }
     initAxios() {
         //设置全局axios默认值
-        axios.defaults.withCredentials=true;
+        axios.defaults.withCredentials = true;
         axios.defaults.timeout = 10000; //10000的超时验证
         axios.defaults.headers['Content-Type'] = 'application/json;charset=UTF-8';
         axios.defaults.headers['Accept'] = 'application/json;charset=UTF-8';
