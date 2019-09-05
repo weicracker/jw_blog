@@ -1,5 +1,5 @@
 import ActionBase from "../actbase";
-import axios from "axios";
+// import axios from "axios";
 class PublicAct extends ActionBase {
     static instance;
     static get Instance() {
@@ -13,17 +13,17 @@ class PublicAct extends ActionBase {
     }
     // 获取每日一句内容
     async getEverySaying() {
-        let res = await axios.get("https://v1.hitokoto.cn/?c=e");
+        let res = await fetch("https://v1.hitokoto.cn/?c=e");
         if (res.status === 200) {
-            let ret = res.data;
+            let ret = res.json();
             return ret;
         }
     }
     // 获取每日一句内容
     async gethotNews(id) {
-        let res = await axios.get("https://api.vips.im/hotnews/GetTypeInfo?id="+id);
+        let res = await fetch("https://www.printf520.com:8080/GetTypeInfo?id="+id);
         if (res.status === 200) {
-            let ret = res.data;
+            let ret = res.json();
             return ret;
         }
     }

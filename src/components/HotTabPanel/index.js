@@ -41,7 +41,7 @@ class HotTabPanel extends Component {
                         </ul>
                     ) : (
                             <div style={{textAlign:"center"}}>
-                                <div class={hotStyle.balls}>
+                                <div className={hotStyle.balls}>
                                     <div></div>
                                     <div></div>
                                     <div></div>
