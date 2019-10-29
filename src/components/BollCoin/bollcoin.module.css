@@ -1,0 +1,82 @@
+.label{
+    display: block;
+    margin: 5px 0;
+}
+.labelKey{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 65px;
+    padding: 0 5px;
+    text-align: right;
+}
+.title{
+    font-size: 24px;
+    margin: 5px;
+}
+.computed{
+    width: 50%;
+    display: inline-block;
+    padding: 0 10px;
+}
+.form{
+    padding: 10px 0;
+    margin: 0;
+}
+.form button{
+    float: right;
+    border: none;
+    color: #fff;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: rgb(129, 118, 231);
+}
+
+.thumbnail {
+    cursor: pointer;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    max-width: 310px;
+    margin-bottom: 30px;
+    border-radius: 0;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.thumbnail:hover{
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+
+}
+.thumbnail .caption {
+    height: 200px;
+    overflow-y: hidden;
+    color: #555;
+    padding: 9px;
+}
+.thumbnail a{
+    box-shadow:none;
+    padding: 0;
+    text-decoration: none;
+}
+.thumbnail img{
+    padding: 0;
+    margin: 0;
+}
+.thumbnail .title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.thumbnail .title small{
+    font-size: 14px;
+    font-weight: 200;
+}
