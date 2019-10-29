@@ -82,7 +82,7 @@ class BollCoin extends React.Component {
               <span className={bollcoin.labelKey}>收盘价:</span>
               <input id="spj_id" onChange={(e) => { this.setState({ spj_val: e.target.value }); console.log('spj_val', e.target.value) }} />
             </label>
-            <div className={bollcoin.computed} >LB:<span>{(this.state.md_val - (this.state.up_val - this.state.md_val)).toFixed(2)}</span></div>
+            <div className={bollcoin.computed} >LB:<span>{(this.state.md_val - (this.state.up_val - this.state.md_val)).toFixed(4)}</span></div>
             {
               this.state.spj_val === 0 ? null : <div className={bollcoin.computed}>BB%:<span>{(((this.state.spj_val - (this.state.md_val - (this.state.up_val - this.state.md_val))) / (this.state.up_val - (this.state.md_val - (this.state.up_val - this.state.md_val))) * 100).toFixed(2) + '%')}</span></div>
             }
