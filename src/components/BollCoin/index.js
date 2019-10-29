@@ -70,9 +70,9 @@ class BollCoin extends React.Component {
         >
           <h2 className={bollcoin.title} ref={subtitle => this.subtitle = subtitle}>区块链计算器</h2>
           <form className={bollcoin.form}>
-            <label className={bollcoin.label} htmlFor="UP_id">
-              <span className={bollcoin.labelKey}>UP:</span>
-              <input id="UP_id" onChange={(e) => { this.setState({ up_val: e.target.value }); console.log('up_val', e.target.value) }} />
+            <label className={bollcoin.label} htmlFor="UB_id">
+              <span className={bollcoin.labelKey}>UB:</span>
+              <input id="UB_id" onChange={(e) => { this.setState({ up_val: e.target.value }); console.log('up_val', e.target.value) }} />
             </label>
             <label className={bollcoin.label} htmlFor="MD_id">
               <span className={bollcoin.labelKey}>MD:</span>
