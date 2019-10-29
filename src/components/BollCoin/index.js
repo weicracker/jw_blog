@@ -1,7 +1,8 @@
 import React from "react";
 import Modal from 'react-modal';
 import bollcoin from "./bollcoin.module.css"
-Modal.setAppElement('#___gatsby')
+Modal.setAppElement('#___gatsby');
+Modal.defaultStyles.overlay.backgroundColor = 'rgba(50,50,50,0.7)';
 const customStyles = {
   content: {
     top: '50%',
